@@ -1,4 +1,14 @@
 ---
-import Challenge1 from "../challenges/01-expandingCards/index.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Projects from "../components/Projects.astro";
 ---
-<Challenge1/>
+<style>
+    html{
+        display: flex;
+        justify-content: center;
+    }
+</style>
+
+<BaseLayout>
+    <Projects />
+</BaseLayout>
