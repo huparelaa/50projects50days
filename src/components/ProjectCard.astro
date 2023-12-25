@@ -1,3 +1,62 @@
 ---
+const { projectName, projectNumber, imagePath, link } = Astro.props;
 ---
 
+<article class="project-item" id="project-item">
+  <a href=`/${link}` class="project-link">
+    <div class="project-item-img-container">
+      <img src={imagePath} alt={projectName} class="project-item-img" />
+    </div>
+    <footer class="project-item-info">
+      <span class="project-number">{projectNumber}</span>
+      <span>{projectName}</span>
+    </footer>
+  </a>
+</article>
+
+<style>
+  .project-item {
+    width: 375px;
+    background-color: #d2c5df;
+    outline: #333 3px solid;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .project-item:hover {
+    cursor: pointer;
+  }
+
+  .project-item-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #d2c5df;
+    padding: 0 1rem;
+    border-radius: 0 0 20px 20px;
+    outline: #333 3px solid;
+    padding: 5px 10px;
+  }
+
+  .project-item-info span {
+    text-align: center;
+    font-size: 1rem;
+  }
+
+  .project-item-img-container {
+    border-radius: 20px 20px 0 0;
+    padding: 4px;
+  }
+
+  .project-item-img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: inherit;
+  }
+
+  .project-link{
+    text-decoration: none;
+    color:#000;
+  }
+</style>

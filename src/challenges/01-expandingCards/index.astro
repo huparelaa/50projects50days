@@ -68,14 +68,15 @@ const altText = "...";
 
 <style>
   @import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;700&family=Ubuntu:wght@700&display=swap");
-  
+
   section {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100dvh;
+    height: 700px;
     overflow: hidden;
     font-family: "Lato", sans-serif;
+    padding: 10px;
   }
 
   .container {
@@ -106,9 +107,10 @@ const altText = "...";
 
   .image p {
     position: absolute;
-    display: inline;
+    display: block;
     bottom: 1rem;
     left: 2rem;
+    width: 100px;
     color: #fff;
     font-size: xx-large;
     font-weight: bold;
@@ -133,10 +135,6 @@ const altText = "...";
   }
 
   @media (max-width: 480px) {
-    .container {
-      width: 100vw;
-    }
-
     .image:nth-of-type(4),
     .image:nth-of-type(5) {
       display: none;

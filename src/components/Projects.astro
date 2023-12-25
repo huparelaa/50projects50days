@@ -1,5 +1,28 @@
 ---
-import Challenge1 from "../challenges/01-expandingCards/index.astro";
+import ProjectCard from "./ProjectCard.astro";
+import { PROJECTSLIST } from "../utils/projectList.js";
 ---
 
-<Challenge1 />
+<section class="projects-list">
+  {
+    PROJECTSLIST.map((project) => (
+      <ProjectCard
+        projectName={project.name}
+        projectNumber={project.day}
+        imagePath={project.imagePath}
+        link={project.link}
+      />
+    ))
+  }
+</section>
+
+<style>
+  .projects-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
+    width: 90vw;
+    column-gap: 0.5em;
+    row-gap: 0.5em;
+    place-items: center;
+  }
+</style>
