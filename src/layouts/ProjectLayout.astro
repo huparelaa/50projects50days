@@ -1,0 +1,45 @@
+---
+const { title } = Astro.props;
+---
+
+<header  class="flex items-center justify-center  mt-7">
+  <a href="/">
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    stroke-width="1.5"
+    stroke="currentColor"
+    class="w-12 h-12 text-white mr-2 hover:text-[color:#AF2AD8] transition-all duration-300 ease-in-out"
+    viewBox="0 0 24 24"
+    width="48"
+    height="48" 
+  >
+    <path
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"
+    ></path>
+  </svg>
+</a>
+
+  <h1 class="text-white text-center  text-5xl">{title}</h1>
+</header>
+<body>
+  <slot />
+</body>
+
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;700&family=Lilita+One&family=Ubuntu:wght@700&display=swap");
+  html {
+    display: flex;
+    justify-content: center;
+  }
+  body {
+    background-color: #3f304e;
+    font-family: "Lilita One", sans-serif;
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+</style>
