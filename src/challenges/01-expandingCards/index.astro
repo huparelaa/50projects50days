@@ -2,15 +2,15 @@
 import type { ImageMetadata } from "astro";
 import { Image } from "astro:assets";
 const images = import.meta.glob<{ default: ImageMetadata }>(
-  "/src/challenges/01-expandingCards/imgs/*.{jpeg,jpg,png,gif}"
+  "/public/project_01/*.{jpeg,jpg,png,gif}"
 );
 const paths = [
-  "/src/challenges/01-expandingCards/imgs/01.jpg",
-  "/src/challenges/01-expandingCards/imgs/02.jpg",
-  "/src/challenges/01-expandingCards/imgs/03.jpg",
-  "/src/challenges/01-expandingCards/imgs/04.jpg",
-  "/src/challenges/01-expandingCards/imgs/05.jpg",
-];
+  "/public/project_01/01.jpg",
+  "/public/project_01/02.jpg",
+  "/public/project_01/03.jpg",
+  "/public/project_01/04.jpg",
+  "/public/project_01/05.jpg",
+]
 const altText = "...";
 ---
 
